@@ -1,0 +1,102 @@
+---
+import BottleCard from "./BottleCard.astro";
+
+interface Props {
+  showCTA?: boolean;
+}
+
+const { showCTA = true } = Astro.props;
+
+const bottles = [
+  { name: "BLACKMOOR 10", age: "10 anos · Single Malt", image: "/img/bottle-10.png" },
+  { name: "BLACKMOOR 12", age: "12 anos · Single Malt", image: "/img/bottle-12.png" },
+  { name: "BLACKMOOR XV", age: "15 anos · Sherry Cask", image: "/img/bottle-xv.png" },
+  { name: "BLACKMOOR 18", age: "18 anos · Reserva", image: "/img/bottle-18.png" },
+  { name: "BLACKMOOR XXI", age: "21 anos · Reserva Especial", image: "/img/bottle-21.png" },
+];
+---
+
+<section
+  id="familia"
+  class="relative py-32 px-15"
+  style="background: linear-gradient(180deg, #000 0%, #1a0f08 50%, #0a0604 100%);"
+>
+  <div class="max-w-[1300px] mx-auto">
+    <div
+      class="flex flex-col lg:flex-row lg:items-end justify-between gap-10 mb-20"
+    >
+      <div class="max-w-2xl">
+        <p
+          class="font-display text-[12px] tracking-[10px] text-gold uppercase mb-6"
+        >
+          Nossas Expressões
+        </p>
+        <h2
+          class="family-title font-display font-semibold tracking-[3px] mb-6 leading-[1.05]"
+          style="font-size: clamp(40px, 5.5vw, 68px);"
+        >
+          <span class="title-script">A</span> FAMÍLIA
+        </h2>
+        <p
+          class="font-body italic text-cream/75 text-[18px] leading-relaxed max-w-xl"
+        >
+          Cada expressão é uma jornada distinta — do calor das Highlands ao
+          silêncio dos barris de carvalho. Expressões únicas, uma só herança.
+        </p>
+      </div>
+
+      {
+        showCTA && (
+          <a
+            href="/familia"
+            class="family-cta inline-flex items-center gap-3 text-gold-light font-body italic text-[18px] no-underline whitespace-nowrap"
+          >
+            <span>Conheça a Família</span>
+            <svg
+              width="22"
+              height="10"
+              viewBox="0 0 22 10"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              class="cta-arrow transition-transform duration-300"
+            >
+              <path d="M0 5h20M16 1l4 4-4 4" />
+            </svg>
+          </a>
+        )
+      }
+    </div>
+
+    <div
+      class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 md:gap-8"
+    >
+      {
+        bottles.map((b) => (
+          <BottleCard name={b.name} age={b.age} image={b.image} />
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<style>
+  .family-title {
+    background: linear-gradient(180deg, var(--color-cream), #c8b58a);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .title-script {
+    font-family: var(--font-body);
+    font-style: italic;
+    font-weight: 400;
+    letter-spacing: 0;
+    font-size: 1.3em;
+  }
+
+  .family-cta:hover .cta-arrow {
+    transform: translateX(6px);
+  }
+</style>

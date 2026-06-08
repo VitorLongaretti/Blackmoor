@@ -1,0 +1,62 @@
+---
+---
+
+<section class="feature-video relative w-full min-h-[85vh] overflow-hidden bg-black">
+  <video
+    class="absolute inset-0 w-full h-full object-cover"
+    src="/video/bottle.mp4"
+    autoplay
+    muted
+    loop
+    playsinline
+    preload="auto"
+  ></video>
+
+  <div class="feature-overlay absolute inset-0 pointer-events-none z-[2]"></div>
+
+  <div
+    class="absolute z-[5] max-w-md text-right"
+    style="top: 22vh; right: 3rem;"
+  >
+    <span
+      class="block font-display text-[11px] tracking-[10px] text-gold uppercase mb-3"
+    >
+      Forjado nas Highlands
+    </span>
+    <p
+      class="italic text-cream/85"
+      style="font-size: clamp(16px, 1.6vw, 22px);"
+    >
+      Cada gota carrega séculos de tradição escocesa.
+    </p>
+  </div>
+
+  <div
+    class="absolute z-[5] max-w-md text-left"
+    style="bottom: 22vh; left: 3rem;"
+  >
+    <span
+      class="block font-display text-[11px] tracking-[10px] text-gold uppercase mb-3"
+    >
+      Maturado em Carvalho
+    </span>
+    <p
+      class="italic text-cream/85"
+      style="font-size: clamp(16px, 1.6vw, 22px);"
+    >
+      O tempo refina o que a terra começou.
+    </p>
+  </div>
+</section>
+
+<style>
+  .feature-overlay {
+    background: linear-gradient(
+      180deg,
+      rgba(10, 6, 4, 0.7) 0%,
+      rgba(10, 6, 4, 0.15) 18%,
+      rgba(10, 6, 4, 0.2) 70%,
+      rgba(10, 6, 4, 0.88) 100%
+    );
+  }
+</style>

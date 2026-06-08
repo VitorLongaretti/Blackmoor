@@ -1,0 +1,73 @@
+---
+interface Props {
+  name: string;
+  age: string;
+  image?: string;
+}
+
+const { name, age, image } = Astro.props;
+---
+
+<div class="bottle-card text-center">
+  <div class="arch-frame relative overflow-hidden mb-6">
+    {
+      image ? (
+        <img
+          src={image}
+          alt={name}
+          class="bottle-img absolute inset-0 w-full h-full object-cover transition-transform duration-700"
+          loading="lazy"
+        />
+      ) : (
+        <>
+          <div
+            class="absolute inset-0"
+            style="background: radial-gradient(ellipse at center top, rgba(74,20,24,0.7) 0%, rgba(10,6,4,0.95) 70%);"
+          />
+          <img
+            src="/img/brand-mark.png"
+            alt=""
+            aria-hidden="true"
+            class="absolute inset-0 m-auto w-3/5 h-3/5 object-contain"
+            style="opacity: 0.18;"
+          />
+          <div class="absolute inset-0 grid place-items-end pb-8">
+            <span class="font-display text-gold opacity-60 text-[10px] tracking-[4px] uppercase">
+              {name}
+            </span>
+          </div>
+        </>
+      )
+    }
+  </div>
+  <h3 class="font-display text-[15px] tracking-[3px] text-gold-light mb-1.5">
+    {name}
+  </h3>
+  <p class="font-body italic text-cream/70 text-[13px] leading-snug">{age}</p>
+</div>
+
+<style>
+  .arch-frame {
+    width: 100%;
+    aspect-ratio: 5 / 7;
+    border-radius: 50% 50% 18px 18px / 32% 32% 4% 4%;
+    border: 1px solid rgba(212, 169, 73, 0.25);
+    background: rgba(10, 6, 4, 0.6);
+    transition:
+      transform 0.5s ease,
+      border-color 0.5s ease,
+      box-shadow 0.5s ease;
+  }
+
+  .bottle-card:hover .arch-frame {
+    border-color: var(--color-gold);
+    transform: translateY(-10px);
+    box-shadow:
+      0 30px 60px rgba(0, 0, 0, 0.55),
+      0 0 100px rgba(212, 169, 73, 0.15);
+  }
+
+  .bottle-card:hover .bottle-img {
+    transform: scale(1.04);
+  }
+</style>

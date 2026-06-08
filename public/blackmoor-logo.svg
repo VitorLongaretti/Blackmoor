@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#d4a949"/>
+      <stop offset="35%" stop-color="#f4d27a"/>
+      <stop offset="60%" stop-color="#c8962e"/>
+      <stop offset="100%" stop-color="#8a6420"/>
+    </linearGradient>
+    <linearGradient id="goldLine" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f4d27a"/>
+      <stop offset="100%" stop-color="#c8962e"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="800" fill="#0a0604"/>
+
+  <circle cx="400" cy="340" r="220" fill="none" stroke="url(#goldLine)" stroke-width="1.5" opacity="0.6"/>
+  <circle cx="400" cy="340" r="210" fill="none" stroke="url(#goldLine)" stroke-width="0.5" opacity="0.4"/>
+
+  <path id="topArc" d="M 220 340 A 180 180 0 0 1 580 340" fill="none"/>
+  <text font-family="Georgia, serif" font-size="18" fill="url(#goldGrad)" letter-spacing="8">
+    <textPath href="#topArc" startOffset="50%" text-anchor="middle">SCOTCH · WHISKY · DISTILLERY</textPath>
+  </text>
+
+  <path id="bottomArc" d="M 220 340 A 180 180 0 0 0 580 340" fill="none"/>
+  <text font-family="Georgia, serif" font-size="18" fill="url(#goldGrad)" letter-spacing="8">
+    <textPath href="#bottomArc" startOffset="50%" text-anchor="middle">EST · 1876 · HIGHLANDS</textPath>
+  </text>
+
+  <g transform="translate(400, 340)" fill="url(#goldGrad)">
+    <path d="M -45,-90
+             Q -55,-105 -60,-120
+             L -58,-122 Q -52,-110 -45,-100
+             M -55,-115 L -70,-115 L -68,-112 L -55,-113
+             M -52,-108 L -72,-108 L -70,-105 L -52,-106
+             M -50,-100 L -75,-100 L -73,-97 L -50,-98
+             M -48,-92 L -68,-90 L -66,-87 L -48,-89
+             M -60,-120 L -78,-128 L -74,-125 L -60,-119"
+             stroke="url(#goldGrad)" stroke-width="3" stroke-linecap="round" fill="none"/>
+
+    <path d="M 45,-90
+             Q 55,-105 60,-120
+             L 58,-122 Q 52,-110 45,-100
+             M 55,-115 L 70,-115 L 68,-112 L 55,-113
+             M 52,-108 L 72,-108 L 70,-105 L 52,-106
+             M 50,-100 L 75,-100 L 73,-97 L 50,-98
+             M 48,-92 L 68,-90 L 66,-87 L 48,-89
+             M 60,-120 L 78,-128 L 74,-125 L 60,-119"
+             stroke="url(#goldGrad)" stroke-width="3" stroke-linecap="round" fill="none"/>
+
+    <g stroke="url(#goldGrad)" stroke-width="2.5" fill="none" stroke-linecap="round">
+      <path d="M -42,-85 Q -50,-100 -55,-115 Q -58,-125 -55,-135"/>
+      <path d="M -50,-100 L -65,-105"/>
+      <path d="M -65,-105 L -72,-100"/>
+      <path d="M -65,-105 L -68,-115"/>
+      <path d="M -55,-115 L -70,-120"/>
+      <path d="M -70,-120 L -75,-128"/>
+      <path d="M -55,-125 L -65,-132"/>
+      <path d="M -55,-135 L -60,-145"/>
+      <path d="M -55,-135 L -48,-145"/>
+
+      <path d="M 42,-85 Q 50,-100 55,-115 Q 58,-125 55,-135"/>
+      <path d="M 50,-100 L 65,-105"/>
+      <path d="M 65,-105 L 72,-100"/>
+      <path d="M 65,-105 L 68,-115"/>
+      <path d="M 55,-115 L 70,-120"/>
+      <path d="M 70,-120 L 75,-128"/>
+      <path d="M 55,-125 L 65,-132"/>
+      <path d="M 55,-135 L 60,-145"/>
+      <path d="M 55,-135 L 48,-145"/>
+    </g>
+
+    <path d="M 0,-80
+             Q -15,-78 -25,-65
+             Q -32,-50 -35,-30
+             L -38,-10
+             Q -38,5 -32,15
+             L -28,22
+             Q -20,28 -10,30
+             L 0,32
+             L 10,30
+             Q 20,28 28,22
+             L 32,15
+             Q 38,5 38,-10
+             L 35,-30
+             Q 32,-50 25,-65
+             Q 15,-78 0,-80 Z"
+             fill="url(#goldGrad)"/>
+
+    <path d="M -25,20
+             Q -30,40 -28,60
+             Q -25,80 -15,90
+             L 15,90
+             Q 25,80 28,60
+             Q 30,40 25,20 Z"
+             fill="url(#goldGrad)"/>
+
+    <ellipse cx="-12" cy="-30" rx="2.5" ry="3.5" fill="#0a0604"/>
+    <ellipse cx="12" cy="-30" rx="2.5" ry="3.5" fill="#0a0604"/>
+    <ellipse cx="0" cy="10" rx="3" ry="2" fill="#0a0604"/>
+  </g>
+
+  <g stroke="url(#goldGrad)" stroke-width="1.5" fill="none" opacity="0.8">
+    <path d="M 150 340 L 200 340"/>
+    <path d="M 600 340 L 650 340"/>
+    <circle cx="160" cy="340" r="3" fill="url(#goldGrad)"/>
+    <circle cx="640" cy="340" r="3" fill="url(#goldGrad)"/>
+  </g>
+
+  <text x="400" y="640"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-size="78"
+        font-weight="700"
+        fill="url(#goldGrad)"
+        text-anchor="middle"
+        letter-spacing="14">BLACKMOOR</text>
+
+  <g stroke="url(#goldGrad)" stroke-width="1" fill="none">
+    <line x1="200" y1="665" x2="380" y2="665"/>
+    <line x1="420" y1="665" x2="600" y2="665"/>
+    <path d="M 380 665 L 390 660 L 400 670 L 410 660 L 420 665" stroke-width="1.2"/>
+  </g>
+
+  <text x="400" y="700"
+        font-family="Georgia, serif"
+        font-size="16"
+        fill="url(#goldGrad)"
+        text-anchor="middle"
+        letter-spacing="10"
+        font-style="italic">AGED IN THE HIGHLANDS</text>
+</svg>

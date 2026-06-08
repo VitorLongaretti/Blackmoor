@@ -1,0 +1,28 @@
+---
+import FilterBar from "./FilterBar.astro";
+import DrinkCard from "./DrinkCard.astro";
+
+const drinks = [
+  { name: "OLD FASHIONED", difficulty: "INTERMEDIÁRIO", time: "5 min · Curto e forte" },
+  { name: "HIGHLAND MULE", difficulty: "FÁCIL", time: "5 min · Borbulhante" },
+  { name: "WHISKY SOUR", difficulty: "INTERMEDIÁRIO", time: "7 min · Ácido" },
+];
+---
+
+<section id="drinks" class="relative py-30 px-15 bg-black">
+  <h2
+    class="font-display text-center tracking-[8px] mb-4 gold-gradient-text"
+    style="font-size: clamp(40px, 6vw, 80px);"
+  >
+    DRINKS
+  </h2>
+  <p class="text-center italic text-[18px] text-cream/70 mb-20 tracking-[2px]">
+    Receitas clássicas com a alma das Highlands.
+  </p>
+
+  <FilterBar />
+
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-[1300px] mx-auto">
+    {drinks.map((d) => <DrinkCard name={d.name} difficulty={d.difficulty} time={d.time} />)}
+  </div>
+</section>
